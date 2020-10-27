@@ -2,10 +2,10 @@ n = 20; % number of iterations
 m = 30; % number of blocks in each
 r = 1.2;
 fprintf("number of layers of cells = %d\ninitial number of cells on the main branch = %d",n,m);
-x = 0;
+x = zeros(1,m+1);
 v = 1.5;
 y = 1:v:(v*m + 1);
-plot(x,y,"MarkerSize",20, "Color","b");
+scatter(x,y,'r');
 xlim([0 n]);
 ylim([0 m+1]);
 xlabel('Layer Number');
@@ -14,8 +14,9 @@ hold on;
 for i = 1:(n/r)
     pause(0.5);
     x = x + r;
-    y = 1:v:(v*m);
+    y = 1:v:(v*m + 1);
     fprintf("x = %d\n",x);
-    plot(x,y,"MarkerSize",20, "Color","b");
+    scatter(x,y,'r');
+    hold on;
 end
 fprintf("\nCompleted Execution :)");

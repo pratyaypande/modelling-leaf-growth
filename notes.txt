@@ -1,0 +1,5 @@
+how to find the newest configuration:
+
+find the force vector
+
+find the distanc
