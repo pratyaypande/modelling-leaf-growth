@@ -3,5 +3,5 @@ function f = leonard_jones(r1,r2)
     k = 1;
     sigma = 1;  % denotes the radius of the blocks
     epsilon = -1;% denotes the depth of the potential well (minima in the V vs r plot)
-    f = 4*epsilon*( (sigma/r)^12 - (sigma/r)^6 );
+    f = 4*(epsilon/sigma)*( (-12)*(sigma/r)^13 + 6*(sigma/r)^7 );
 end
