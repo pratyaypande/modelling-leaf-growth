@@ -3,3 +3,15 @@ how to find the newest configuration:
 find the force vector
 
 find the distanc
+
+            iterate through each of the y values
+                iterate through each block j 1:num_blocks
+                    check if the floor(i/rnd(j)) > block_y(j)
+                        if yes
+                            increment block_y by 1
+                            x coordinates can be found by j:1:(j+sz);
+                            print one layer of cells spanning the jth block with block_y as y value
+                        if no, then continue
+                go to the next block
+            go to the next layer
+

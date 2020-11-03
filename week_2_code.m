@@ -1,6 +1,6 @@
 nX = 100;
 nY = 45;
-num_blocks = 5;
+num_blocks = 10;
 sep = 1.1;
 sz = nY/num_blocks;
 SD = 5;
@@ -10,7 +10,6 @@ disp(rnd);
 block_y = zeros(num_blocks,1);
 xcoor = 1:1:nX;
 ycoor = zeros(1,nX);
-
 fprintf("code is running...\n");
 fprintf("x_coordinate size = %d, y_coordinate size = %d\n",nX,nY);
 disp(size(xcoor));
@@ -22,10 +21,10 @@ for i = 1:nY
     for j = 1:num_blocks
         if(floor(i/rnd(j)) > block_y(j))
             block_y(j) = block_y(j) + 1;
-            xcoor = j:1:(j+sz-1);
-            ycoor = block_y(j)*ones(sz,1);
+            xcoor = (j:1:(j+sz-1));
+            ycoor = (block_y(j))*ones(floor(sz),1);
             scatter(xcoor,ycoor,'r');
-            fprintf("");
+            fprintf("printing\n");
             hold on;
         end
     end
