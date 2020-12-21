@@ -1,17 +1,10 @@
-how to find the newest configuration:
+*Why are we doing this project: * We are trying to develop a simplistic model to check if we can accurately model the growth of a leaf using simple concepts of classical mechanics. In the present, we have a lot of very complicated models available in litreature that take a lot of parameters into account, and often involve solving PDEs and are computationally expensive and difficult to understand and implement.
 
-find the force vector
 
-find the distanc
+We used the "Classical Lennard Jones potential"
 
-            iterate through each of the y values
-                iterate through each block j 1:num_blocks
-                    check if the floor(i/rnd(j)) > block_y(j)
-                        if yes
-                            increment block_y by 1
-                            x coordinates can be found by j:1:(j+sz);
-                            print one layer of cells spanning the jth block with block_y as y value
-                        if no, then continue
-                go to the next block
-            go to the next layer
+Lennard jones potential has both atractive and repulsive parts
 
+(sigma/r)^12 describes the Pauli repulsion at short distances and the (sigma/r)^6 term
+describes the attractive term at long distances (dispersion force) which vanishes at
+infinite distances.
