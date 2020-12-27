@@ -18,13 +18,15 @@ while(n < cell_number_limit)
         x = 0:sep:((n-1)*sep);
         x = x*1000;
         fprintf("radius = %f, separation = %f, number of cells = %d\n",radius,sep,n);
-        figure;
-        axis manual;
-        axis([-1 cell_number_limit*10000 -1 2]);
-        scatter(x,y,40000*radius,'k');
+        %figure;
+        %axis manual;
+        %axis([-1 cell_number_limit*10000 -1 2]);
+        %scatter(x,y,40000*radius,'k');
+        %hold on;
     else
         fprintf("radius = %f, separation = %f, number of cells = %d\n",radius,sep,n);
-        scatter(0,1,40000*radius);
+        %scatter(0,1,40000*radius);
+        %hold on;
     end
     radius = radius + cell_growth_rate;
     %fprintf("radius = %f, separation = %f, number of cells = %d\n",radius,sep,n);
@@ -32,5 +34,5 @@ while(n < cell_number_limit)
         n = n*2;
         radius = radius/2;
     end
-    pause(0.8);
+    %pause(0.8);
 end
