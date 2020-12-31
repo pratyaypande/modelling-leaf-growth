@@ -15,3 +15,12 @@ find the distanc
                 go to the next block
             go to the next layer
 
+1. Get the matrix containing the rates of growth.
+
+2. Execute the a step of growth for every compartment in the matrix.
+
+a. 
+
+3. Log in the file.
+
+4. Go back to step 2.

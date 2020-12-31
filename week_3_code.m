@@ -2,11 +2,12 @@ n = 1;
 radius = 0.001;
 sep = 0;
 sigma = 0.01;
-cell_growth_rate = 0.0005;
+cell_growth_rate = 0.0004;
 cell_number_limit = 20;
 %xlim([-1 cell_number_limit*10000]);
 %ylim([-1 2]);
 fun = @(sep,n) LJ_derivative(sep,n);
+fin_mat = [];
 while(n < cell_number_limit)
     % plot cells of radius and calculate separation as given
     if(n > 1)
@@ -28,6 +29,7 @@ while(n < cell_number_limit)
         %scatter(0,1,40000*radius);
         %hold on;
     end
+    fin_mat = [fin_mat;[40000*radius,sep,n]];
     radius = radius + cell_growth_rate;
     %fprintf("radius = %f, separation = %f, number of cells = %d\n",radius,sep,n);
     if(radius > sigma/2)
@@ -36,3 +38,5 @@ while(n < cell_number_limit)
     end
     %pause(0.8);
 end
+writematrix(fin_mat,'testdata.csv');
+type 'testdata.csv'
