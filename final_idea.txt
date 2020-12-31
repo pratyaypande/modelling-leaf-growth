@@ -1,0 +1,7 @@
+Uptil the previous week, we had compartmentalised the cells of the leaf and had introduced the Lennard-Jones Potential between the cells of the leaf
+
+We had solved the problem for one compartment, given some particular rate of cell growth and some threshold for the cell to divide (sigma/2)
+
+Nextly, we take various rates of growth of each of the compartments laterally and study thegrowth of the leaf
+
+The rates of growth of the compartments are varyied to obtain different leaves. Here we have taken the case of the Gaussian function (skewed) and the sine wave function to obtain 2 different leaves.
