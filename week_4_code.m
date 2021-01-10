@@ -68,6 +68,7 @@ for i = 1:n
     axis manual;
     %axis([-1 cell_number_limit*10000 -1 2]);
     scatter(x,ones(1,num) + gg,2*radius,'k');
+    xlim([0 600]);
     gg = gg - 1;
     hold on;
 end
