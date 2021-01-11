@@ -1,5 +1,5 @@
 %take the rate matrix
-rates = gaussian_dist(20,1,1);
+rates = sinc_dist(20,1,pi);
 n = size(rates,2);
 figure
 c = 1:1:n;
