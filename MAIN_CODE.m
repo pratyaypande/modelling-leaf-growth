@@ -17,19 +17,11 @@ while(i <= n)
     gt = get_data(rates(i),cell_number_limit,i,radius,sigma);
     i = i + 1;
 end
-%created data
-%now, read the data of each file and display them in a graph
-%PROCESS:
-% 1 i = 1;
-% 2 read line i of every file.
-% 3 plot line i or every file.
-% 4 i = i + 1;
-% 5 go to step 2.
 i = 1;
 A = zeros(n,3);
 while(i <= n)
     nme = 'values_' + string(i) + '.csv';
-    dpf = readmatrix('C:\Users\LeoCE\ProjectFiles\modelling-leaf-growth\cell_data\' + nme);
+    dpf = readmatrix('cell_data\' + nme);
     de = size(dpf,1);
     A(i,1) = dpf(de,1);
     A(i,2) = dpf(de,2);
@@ -40,23 +32,6 @@ b = zeros(n,1);
 crr = ones(n,1);
 figure;
 dx = 1;
-%while(sum(b) <= n)
-%    
-%    for i = 1:n
-%        radius = A(i).mat(crr(i),1);
-%        sep = A(i).mat(crr(i),2);
-%        num = A(i).mat(crr(i),3);
-%        crr(i) = min(crr(i)+1,A(i).n);
-%        x = 0:sep:((n-1)*sep);
-%        x = x*1000;
-%        %fprintf("radius = %f, separation = %f, number of cells = %d\n",radius,sep,n);
-%        axis manual;
-%        axis([-1 cell_number_limit*10000 -1 2]);
-%        scatter(x,ones(1,num),40000*radius,'k');
-%        hold on;
-%    end
-%end
-
 % final plot of the data
 gg = n-1;
 for i = 1:n

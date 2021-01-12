@@ -1,5 +1,4 @@
-% find the optimum separation where the leonard jones potential is
-% minimised
+% test function to find the optimum separation where the leonard jones potential is minimised
 
 fun = @(sep,n) LJ_derivative(sep,n);
 n = 1000;
