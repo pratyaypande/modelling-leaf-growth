@@ -8,7 +8,7 @@ cell_number_limit = 20;
 radius = 0.001;
 sigma = 0.001; i = 1;
 while(i <= n)
-    fprintf("Recorded data of compartment %d in values_%d.csv\n",i,i);
+    fprintf("Recorded data of compartment %d in cell_data/values_%d.csv\n",i,i);
     gt = get_data(rates(i),cell_number_limit,i,radius,sigma);
     i = i + 1;
 end
@@ -25,7 +25,6 @@ b = zeros(n,1);
 crr = ones(n,1);
 figure;
 dx = 1;
-% final plot of the data
 gg = n-1;
 for i = 1:n
     radius = A(i,1); sep = A(i,2); num = A(i,3);
