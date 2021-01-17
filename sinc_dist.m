@@ -6,6 +6,5 @@ function dist = sinc_dist(n,A,k)
     end
     fac = 2500;
     dist = abs(A*dist);
-    %dist = abs(A*sinc(x));
     dist = dist/fac;
 end

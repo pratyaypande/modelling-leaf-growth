@@ -18,7 +18,6 @@ function fin_mat = get_data(cell_growth_rate,cell_number_limit,comp_num,radius,s
         end
         iter = iter - 1;
     end
-    fprintf("cell number limit = %d", cell_number_limit);
-    fle = 'C:\Users\LeoCE\ProjectFiles\modelling-leaf-growth\cell_data\values_' + string(comp_num) + '.csv';
+    fle = 'cell_data\values_' + string(comp_num) + '.csv';
     writematrix(fin_mat,fle);
 end
